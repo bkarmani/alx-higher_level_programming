@@ -6,4 +6,4 @@ str2 = "School"
 
 str1 = str1 + " " + str2
 
-print(f"Welcome to {str1}!")
+print("Welcome to {}!". format(str1))
