@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # 9-print_last_digit.py
-# Brennan D Baraban <benjaminozor@gmail.com>
+# Benjamin <benjaminozor@gmail.com>
 
 
 def print_last_digit(number):
