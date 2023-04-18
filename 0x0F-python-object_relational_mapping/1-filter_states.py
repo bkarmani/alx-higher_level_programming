@@ -11,7 +11,8 @@ def ls_states(usr, ps, d):
     ports = 3306
     db = MySQLdb.connect(host=h, user=usr, passwd=ps, db=d, port=ports)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%'")
+    cur.execute("""SELECT * FROM states WHERE name LIKE
+                    BINARY 'N%' ORDER BY id ASC""")
     out = cur.fetchall()
     cur.close()
     db.close()
