@@ -11,7 +11,7 @@ def ls_states(usr, p, d, state):
     db = MySQLdb.connect(host=h, user=usr, passwd=p, db=d, port=ports)
     cur = db.cursor()
     cur.execute(" SELECT * FROM states WHERE name
-            LIKE BINARY '{}' ".format(state))
+                LIKE BINARY '{}' ".format(state))
     out = cur.fetchall()
     cur.close()
     db.close()
