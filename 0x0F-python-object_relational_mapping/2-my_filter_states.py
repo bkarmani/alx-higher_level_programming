@@ -10,7 +10,7 @@ def ls_states(usr, p, d, state):
     ports = 3306
     db = MySQLdb.connect(host=h, user=usr, passwd=p, db=d, port=ports)
     cur = db.cursor()
-    cur.execute(" SELECT * FROM states WHERE name = '{}' ".format(state))
+    cur.execute(" SELECT * FROM states WHERE name = '{}' ORDER BY id ASC ".format(state))
     out = cur.fetchall()
     cur.close()
     db.close()
